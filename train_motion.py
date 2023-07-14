@@ -458,12 +458,12 @@ def val(epoch):
 
 
 
-data_path = '/vol/bitbucket/qm216/UKBBcardiac/cardiacdata/ukbbSALA_CMR/train'
+data_path = '/train_data_path'
 train_set = TrainDataset(data_path)
 # loading the data
 training_data_loader = DataLoader(dataset=train_set, num_workers=n_worker, batch_size=bs, shuffle=True)
 
-val_data_path = '/vol/bitbucket/qm216/UKBBcardiac/cardiacdata/ukbbSALA_CMR/val'
+val_data_path = '/val_data_path'
 val_set = ValDataset(val_data_path)
 val_data_loader = DataLoader(dataset=val_set, num_workers=n_worker, batch_size=bs, shuffle=False)
 
