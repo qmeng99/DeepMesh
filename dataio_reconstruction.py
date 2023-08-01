@@ -84,23 +84,23 @@ def get_data(path, fr):
 
 def load_data(data_path, filename, T_num, rand_frame=None):
     # Load images and labels
-    img_sa_path = join(data_path, filename, 'cropimg_64', 'sa_img.nii.gz')  # (H, W, 1, frames)
-    img_2ch_path = join(data_path, filename, 'cropimg_64', '2ch_img.nii.gz')
-    img_4ch_path = join(data_path, filename, 'cropimg_64', '4ch_img.nii.gz')
+    img_sa_path = join(data_path, filename, 'sa_img.nii.gz')  # (H, W, 1, frames)
+    img_2ch_path = join(data_path, filename, '2ch_img.nii.gz')
+    img_4ch_path = join(data_path, filename, '4ch_img.nii.gz')
 
-    mesh2seg_SA_path = join(data_path, filename, 'contourpara', 'proj_mesh_SA.npy') # (H, W, D)
-    mesh2seg_2CH_path = join(data_path, filename, 'contourpara', 'proj_mesh_2CH.npy') # (H, W)
-    mesh2seg_4CH_path = join(data_path, filename, 'contourpara', 'proj_mesh_4CH.npy') # (H, W)
+    mesh2seg_SA_path = join(data_path, filename, 'proj_mesh_SA.npy') # (H, W, D)
+    mesh2seg_2CH_path = join(data_path, filename, 'proj_mesh_2CH.npy') # (H, W)
+    mesh2seg_4CH_path = join(data_path, filename, 'proj_mesh_4CH.npy') # (H, W)
 
-    contour_sa_path = join(data_path, filename, 'contourpara', 'contour_sa.npy')  # (H, W, 9, frames)
-    contour_2ch_path = join(data_path, filename, 'contourpara', 'contour_2ch.npy')  # (H, W, 1, frames)
-    contour_4ch_path = join(data_path, filename, 'contourpara', 'contour_4ch.npy')  # (H, W, 1, frames)
+    contour_sa_path = join(data_path, filename, 'contour_sa.npy')  # (H, W, 9, frames)
+    contour_2ch_path = join(data_path, filename, 'contour_2ch.npy')  # (H, W, 1, frames)
+    contour_4ch_path = join(data_path, filename, 'contour_4ch.npy')  # (H, W, 1, frames)
 
-    vertices_path = join(data_path, filename, 'contourpara', 'vertices_init_myo_ED_smooth.npy')
-    faces_path = join(data_path, filename, 'contourpara', 'faces_init_myo_ED_smooth.npy')
-    affine_path = join(data_path, filename, 'contourpara', 'affine.npz')
-    origin_path = join(data_path, filename, 'contourpara', 'origin.npz')
-    vertices_gt_path = join(data_path, filename, 'contourpara', 'vertices_resampled_ED.npy')
+    vertices_path = join(data_path, filename, 'vertices_init_myo_ED_smooth.npy')
+    faces_path = join(data_path, filename, 'faces_init_myo_ED_smooth.npy')
+    affine_path = join(data_path, filename, 'affine.npz')
+    origin_path = join(data_path, filename, 'origin.npz')
+    vertices_gt_path = join(data_path, filename, 'vertices_resampled_ED.npy')
 
 
     # generate random index for t and z dimension
