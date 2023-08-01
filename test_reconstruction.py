@@ -209,7 +209,7 @@ def test(sub_path):
 
 
 
-test_data_path = '/vol/bitbucket/qm216/UKBBcardiac/cardiacdata/ukbbSALA_CMR/test'
+test_data_path = '/test_data_path'
 
 
 DeformNet = deformnet().cuda()
