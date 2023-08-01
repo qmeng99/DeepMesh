@@ -132,18 +132,18 @@ def get_data_ES(path, path_ES):
 
 def load_data(data_path, filename, T_num, rand_frame=None):
     # Load images and labels
-    img_sa_path = join(data_path, filename, 'cropimg_64', 'sa_img.nii.gz')  # (H, W, 1, frames)
-    img_2ch_path = join(data_path, filename, 'cropimg_64', '2ch_img.nii.gz')
-    img_4ch_path = join(data_path, filename, 'cropimg_64', '4ch_img.nii.gz')
+    img_sa_path = join(data_path, filename, 'sa_img.nii.gz')  # (H, W, 1, frames)
+    img_2ch_path = join(data_path, filename, '2ch_img.nii.gz')
+    img_4ch_path = join(data_path, filename, '4ch_img.nii.gz')
 
-    contour_sa_path = join(data_path, filename, 'contourpara', 'contour_sa.npy') # (H, W, 9, frames)
-    contour_2ch_path = join(data_path, filename, 'contourpara', 'contour_2ch.npy') # (H, W, 1, frames)
-    contour_4ch_path = join(data_path, filename, 'contourpara', 'contour_4ch.npy')# (H, W, 1, frames)
+    contour_sa_path = join(data_path, filename, 'contour_sa.npy') # (H, W, 9, frames)
+    contour_2ch_path = join(data_path, filename, 'contour_2ch.npy') # (H, W, 1, frames)
+    contour_4ch_path = join(data_path, filename, 'contour_4ch.npy')# (H, W, 1, frames)
 
-    vertices_path = join(data_path, filename, 'pred_ED', 'pred_vertices_ED_new.npy')
-    faces_path = join(data_path, filename, 'contourpara', 'faces_init_myo_ED.npy')
-    affine_path = join(data_path, filename, 'contourpara', 'affine.npz')
-    origin_path = join(data_path, filename, 'contourpara', 'origin.npz')
+    vertices_path = join(data_path, filename, 'pred_vertices_ED_new.npy')
+    faces_path = join(data_path, filename, 'faces_init_myo_ED.npy')
+    affine_path = join(data_path, filename, 'affine.npz')
+    origin_path = join(data_path, filename, 'origin.npz')
 
     # generate random index for t and z dimension
     if rand_frame is not None:
@@ -186,22 +186,22 @@ def load_data(data_path, filename, T_num, rand_frame=None):
 
 def load_data_ES(data_path, filename):
     # Load images and labels
-    img_sa_path = join(data_path, filename, 'cropimg_64', 'sa_img.nii.gz')
-    img_2ch_path = join(data_path, filename, 'cropimg_64', '2ch_img.nii.gz')
-    img_4ch_path = join(data_path, filename, 'cropimg_64', '4ch_img.nii.gz')
+    img_sa_path = join(data_path, filename, 'sa_img.nii.gz')
+    img_2ch_path = join(data_path, filename, '2ch_img.nii.gz')
+    img_4ch_path = join(data_path, filename, '4ch_img.nii.gz')
 
-    img_sa_ES_path = join(data_path, filename, 'cropimg_64', 'sa_ES_img.nii.gz')
-    img_2ch_ES_path = join(data_path, filename, 'cropimg_64', '2ch_ES_img.nii.gz')
-    img_4ch_ES_path = join(data_path, filename, 'cropimg_64', '4ch_ES_img.nii.gz')
+    img_sa_ES_path = join(data_path, filename, 'sa_ES_img.nii.gz')
+    img_2ch_ES_path = join(data_path, filename, '2ch_ES_img.nii.gz')
+    img_4ch_ES_path = join(data_path, filename, '4ch_ES_img.nii.gz')
 
-    contour_sa_path = join(data_path, filename, 'contourpara', 'contour_sa_es.npy')
-    contour_2ch_path = join(data_path, filename, 'contourpara', 'contour_2ch_es.npy')
-    contour_4ch_path = join(data_path, filename, 'contourpara', 'contour_4ch_es.npy')
+    contour_sa_path = join(data_path, filename, 'contour_sa_es.npy')
+    contour_2ch_path = join(data_path, filename, 'contour_2ch_es.npy')
+    contour_4ch_path = join(data_path, filename, 'contour_4ch_es.npy')
 
-    vertices_path = join(data_path, filename, 'pred_ED', 'pred_vertices_ED_new.npy')
-    faces_path = join(data_path, filename, 'contourpara', 'faces_init_myo_ED.npy')
-    affine_path = join(data_path, filename, 'contourpara', 'affine.npz')
-    origin_path = join(data_path, filename, 'contourpara', 'origin.npz')
+    vertices_path = join(data_path, filename, 'pred_vertices_ED_new.npy')
+    faces_path = join(data_path, filename, 'faces_init_myo_ED.npy')
+    affine_path = join(data_path, filename, 'affine.npz')
+    origin_path = join(data_path, filename, 'origin.npz')
 
     # load obj
     vertex_ed = np.load(vertices_path)
